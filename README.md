@@ -42,6 +42,8 @@ User has following rights :
 >[Sheikh Hafijul Ali](https://github.com/HafijulAli) <br>
 >[Diksha Patidar](https://github.com/diksha0149)   <br>
 <hr>
+
+
 ## <u>Deployment</u>
 Application is deployed on top of CI/CD pipeline of Heroku platform.<br>
 To quickly test the application, visit the following link<br>
