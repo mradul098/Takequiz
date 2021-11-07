@@ -11,6 +11,7 @@ Admin has following rights :
 - Decide number of question to be present in test
 - Create Questions pool (pool maybe greater than number of question in test.)
 - Can see the ranks of candidates who has already completed their test
+- Can keep the count of the number of the tests created
 <hr>
 
 ## <u>Features Specification</u>
