@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../Format/NavBar";
 import { Link, Redirect } from "react-router-dom";
-import Emoji from "../Format/Emoji";
 import QuizService from "../../service/QuizService";
 import QuizHeader from "./QuizHeader";
 import ToolTip from "../Dashboard/ToolTip";
@@ -54,9 +53,9 @@ class QuizFetcher extends Component {
                 textAlign: "center",
               }}
             >
-              <div className="profile-name">Enter Quiz Code</div>
+              <div className="profile-name">Enter Quiz Id</div>
               <div className="profile-email pb-3">
-                There is still time, run away! You don't have to do this!
+                
               </div>
               <input
                 className="quiz-code-input"
@@ -66,11 +65,11 @@ class QuizFetcher extends Component {
                 onChange={this.handleQuizCodeInput}
               />
               <button className="tool-button" onClick={this.handleFindQuiz}>
-                <Emoji emoji="🔎" /> Find Quiz
+                Enter
               </button>
               {this.state.error && (
                 <div className="profile-email pb-3" style={{}}>
-                  No quiz found, good for you!
+                  Check your id
                 </div>
               )}
               {!this.state.error && this.state.quiz && (
@@ -82,14 +81,10 @@ class QuizFetcher extends Component {
                   <div className="tooltip-wrapper">
                     <Link to="/quiz-taker">
                       <button className="tool-button">
-                        <Emoji emoji="⚔️" /> Proceed To Battle
+                        Start
                       </button>
                     </Link>
-                    <ToolTip
-                      emoji="🪓"
-                      title="There is no turning back!"
-                      description="No mercy will be shown unto you. You shall receive the questions!"
-                    />
+                   
                   </div>
                 </>
               )}

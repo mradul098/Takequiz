@@ -10,21 +10,9 @@ const QuizOption = (props) => {
               <label className="option-label">{props.id + 1}</label>
             </div>
             <div className="card">
-              <input
-                className="option-input"
-                type="text"
-                value={props.value}
-                disabled
-              />
+              <button className="tool-button2">{props.value}</button>
             </div>
-            {/* <div className="card">
-              <button
-                className="remove-option-button"
-                onClick={handleOptionRemove}
-              >
-                <Emoji emoji="⛔️" />
-              </button>
-            </div> */}
+           
           </div>
         </div>
       </div>

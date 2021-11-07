@@ -98,7 +98,7 @@ class Registration extends Component {
                     type="text"
                     className="form-control input-field"
                     aria-describedby="emailInput"
-                    placeholder="John Doe"
+                    placeholder="Name"
                     value={this.state.name}
                     onChange={this.handleNameChange}
                   />

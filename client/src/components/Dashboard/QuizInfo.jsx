@@ -64,42 +64,7 @@ const QuizInfo = (props) => {
           {/* <Link to="/result">View  Result</Link> */}
         </td>
       </tr>
-      {/* <div className="row">
-        <div className="col-sm-5 option-name">{props.title}</div>
-        <div
-          className="col-sm-2 option-dropdown"
-          style={{ color: "var(--patterq-bg-dark" }}
-        >
-          {props.participated}
-        </div>
-        <div
-          className="col-sm-2 option-dropdown"
-          style={{ color: "var(--patterq-bg-dark" }}
-        >
-          {props.flawless}
-        </div>
-        <div className="col-sm-3">
-          <div className="card">
-            <div
-              className="option-dropdown"
-              style={{
-                fontSize: "14px",
-                width: "100%",
-              }}
-            >
-              <span
-                style={{
-                  margin: "8px",
-                }}
-              >
-                <Emoji emoji="🧲" />
-              </span>
-              {props.id}
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <hr /> */}
+      
     </React.Fragment>
   );
 };

@@ -36,7 +36,7 @@ class Dashboard extends Component {
 
   getQuizzes = () => {
     const user_id = sessionStorage.getItem("patterq-user-id");
-    QuizService.findByUser(user_id).then((response) => {
+    QuizService.findAll().then((response) => {
       if (response === false) {
       } else {
         this.props.onQuizLoad(response);

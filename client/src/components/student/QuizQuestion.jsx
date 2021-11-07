@@ -19,16 +19,11 @@ const QuizQuestion = (props) => {
           </div>
           <div className="row pt-3">
             <div className="col-sm-12">
-              <label className="option-label">[Answer]</label>
+              <label className="option-label"></label>
               <select
                 defaultValue=""
-                className="option-dropdown"
-                style={{
-                  width: "max-content",
-                  marginTop: ".2em",
-                  marginLeft: ".5em",
-                  color: "var(--patterq-bg-dark)",
-                }}
+                className="tool-button2"
+                
                 onChange={handleSelectAnswer}
               >
                 <option value="" disabled hidden>
@@ -43,20 +38,7 @@ const QuizQuestion = (props) => {
             </div>
           </div>
         </div>
-        {/* <div className="col-sm-2">
-          <button
-            className="remove-button"
-            onClick={() => props.onRemove(question.id)}
-          >
-            <Emoji emoji="🗑️" /> Remove
-          </button>
-          <button
-            className="add-button"
-            onClick={() => props.onAddOption(question.id)}
-          >
-            <Emoji emoji="✍️" /> Add Option
-          </button>
-        </div> */}
+        
       </div>
     </div>
   );

@@ -44,16 +44,11 @@ const Question = (props) => {
           </div>
           <div className="row pt-3">
             <div className="col-sm-12">
-              <label className="option-label">[Answer]</label>
+              <label className="option-label"></label>
               <select
                 defaultValue=""
-                className="option-dropdown"
-                style={{
-                  width: "max-content",
-                  marginTop: ".2em",
-                  marginLeft: ".5em",
-                  color: "var(--patterq-bg-dark)",
-                }}
+                className="option-dropdown tool-button2"
+                
                 onChange={handleSelectAnswer}
               >
                 <option value="" disabled hidden>

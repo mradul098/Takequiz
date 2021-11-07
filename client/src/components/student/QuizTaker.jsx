@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NavBar from "../Format/NavBar";
 import { Redirect } from "react-router-dom";
 import QuizQuestion from "./QuizQuestion";
-import Emoji from "../Format/Emoji";
 import QuizService from "../../service/QuizService";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 // import Quiz from "../model/Quiz";
@@ -94,23 +93,20 @@ class QuizTaker extends Component {
         </CountdownCircleTimer>
         </div>
         <div className="container-fluid">
-          <div className="row mt-5">
+          {/* <div className="row mt-5">
             <div className="col-sm-8 offset-sm-2 section">
-              <div className="profile-name">{quiz.title}</div>
-              <div className="profile-email">{quiz.description}</div>
+              
               <div
                 className="option-dropdown pt-4"
                 style={{
                   width: "max-content",
                 }}
               >
-                <span style={{ color: "var(--patterq-bg-dark)" }}>
-                  Quiz Type:{" "}
-                </span>
-                {quiz.type}
+                
+    
               </div>
             </div>
-          </div>
+          </div>  */}
 
          
 
@@ -120,12 +116,7 @@ class QuizTaker extends Component {
                 key={question.id}
                 question={question}
                 onSelectAnswer={this.handleSelectAnswer}
-                //   onTitleChange={this.handleQuestionTitleChange}
-                //   onRemove={this.handleRemoveQuestion}
-                //   onAddOption={this.handleQuestionAddOption}
-                //   onOptionChange={this.handleOptionChange}
-                //   onOptionRemove={this.handleRemoveOption}
-                //   onSelectAnswer={this.handleSelectAnswer}
+
               />
             ))}
           </div>
@@ -137,7 +128,7 @@ class QuizTaker extends Component {
               }}
             >
               <button className="tool-button" onClick={this.handleSubmit}>
-                <Emoji emoji="💣" /> Submit
+                Submit
               </button>
             </div>
           </div>

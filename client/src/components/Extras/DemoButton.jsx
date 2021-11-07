@@ -1,5 +1,5 @@
 import React from "react";
-import Emoji from "../Format/Emoji";
+
 
 const DemoButton = () => {
   return (
@@ -10,7 +10,7 @@ const DemoButton = () => {
           fill: "blue",
         }}
       >
-        <Emoji emoji="💻" /> Watch Demo
+        Watch Demo
       </button>
     </React.Fragment>
   );

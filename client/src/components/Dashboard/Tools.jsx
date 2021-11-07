@@ -31,20 +31,7 @@ const Tools = (props) => {
             
           </div>
         </div>
-        {/* <div className="card">
-          <div className="tooltip-wrapper">
-            <button disabled="disabled" className="tool-button grayed">
-              <Emoji emoji="🔥" /> Survival (Pro)
-            </button>
-          </div>
-        </div>
-        <div className="card">
-          <div className="tooltip-wrapper">
-            <button disabled="disabled" className="tool-button grayed">
-              <Emoji emoji="🩸" /> Slay 'em (Pro)
-            </button>
-          </div>
-        </div> */}
+       
       </div>
       <div className="row mt-4">
         <div className="card">

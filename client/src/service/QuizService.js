@@ -33,10 +33,25 @@ const QuizService = {
         return false;
       });
   },
+  findAll: async () => {
+    const authToken = sessionStorage.getItem("patterq-authToken");
+    return await axios
+      .get("/api/v1/quizzes/quizzer/" , {
+        headers: {
+          "auth-token": authToken,
+        },
+      })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => {
+        return false;
+      });
+  },
   findById: async (quiz_id) => {
     const authToken = sessionStorage.getItem("patterq-authToken");
     return await axios
-      .get("/api/v1/quizzes/" + quiz_id, {
+      .get("/api/v1/quizzes/", {
         headers: {
           "auth-token": authToken,
         },

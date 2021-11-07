@@ -7,7 +7,7 @@ const CreatedResultList = (props) => {
     <div  className={props.classes}>
       <div className="profile-name">Quiz Results</div>
       <div className="profile-email">
-        {/* View results */}
+
       </div>
 { console.log("props",props)}
       <table className="table mt-4">
@@ -24,14 +24,12 @@ const CreatedResultList = (props) => {
         
           {props.quizzes.map((quiz) => (           
              
-            // console.log("++++++"),        
-
-            // console.log(quiz.partInfo[0].partScore),
-            // console.log("++++++"),    
+         
             quiz.partInfo.map((s,i)=>(
+             
               (quiz.partInfo[i].partId==props.user.name || props.user.name == "Admin")?
               <ResultInfo
-            // for (let i = 0; i < partInfo.length; i++) {
+           
                 id={quiz._id}
                 title={quiz.title} 
                                 

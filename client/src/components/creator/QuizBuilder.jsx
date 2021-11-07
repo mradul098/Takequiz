@@ -159,12 +159,14 @@ class QuizBuilder extends Component {
                 value={this.state.title}
                 onChange={this.handleTitleChange}
               />
+              <br></br>
               <input
                 className="profile-email input-quiz-desc mt-1"
                 placeholder="Quiz Description"
                 value={this.state.description}
                 onChange={this.handleDescriptionChange}
               />
+              <br></br>
               <input
                 className="profile-email input-quiz-desc mt-1"
                 placeholder="Quiz Time in minutes"
