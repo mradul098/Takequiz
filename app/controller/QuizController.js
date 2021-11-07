@@ -20,7 +20,12 @@ const QuizController = {
     try {
       // create Quiz
       const quiz = new Quiz({ user_id, title, description, type,time, questions});
-
+      // //   validating given data
+      // const { error } = quizSchema.validate(quiz);
+      // console.log(error);
+      // if (error)
+      //   return res.status(400).send("[validation error] Invalid data given.");
+      // return res.status(200).send("HU");
       const savedQuiz = await quiz.save();
 
       const quizzer = TakequizController.incrementCreatedCount(user_id);
@@ -36,11 +41,18 @@ const QuizController = {
 
   findById: async (req, res, next) => {
     try {
-      const quizzes = await Quiz.find();
-      if (quizzes) {
-        return res.status(200).send(quizzes);
+      const quiz = await Quiz.findById(req.params.quiz_id);
+      if (quiz) {
+        // remove answers and send
+        const { questions } = quiz;
+        for (let i = 0; i < questions.length; i++) {
+          const { _id, options, id, title } = questions[i];
+          questions[i] = { _id, options, id, title };
+        }
+        quiz.questions = questions;
+        return res.status(200).send(quiz);
       }
-      return res.status(400).send("Invalid data given.");
+      return res.status(400).send("Quiz not found.");
     } catch (err) {
       console.log("Error", err);
       return res.status(400).send("Invalid data given.");
@@ -62,7 +74,7 @@ const QuizController = {
 
   findByUser: async (req, res, next) => {
     try {
-      const quizzes = await Quiz.find({ user_id: req.params.user_id });
+      const quizzes = await Quiz.find();
       if (quizzes) {
         return res.status(200).send(quizzes);
       }
