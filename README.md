@@ -42,11 +42,11 @@ User has following rights :
 >[Diksha Patidar](https://github.com/diksha0149)   <br>
 <hr>
 ## <u>Deployment</u>
-Application is deployed on top of CI/CD pipeline of Heroku platform.
-To quickly test the application, visit the following link
-| Web-page | Link | 
-|   ----   | ---- |
-| Live Project|[Click here](https://walkover-takequiz.herokuapp.com/)| 
+Application is deployed on top of CI/CD pipeline of Heroku platform.<br>
+To quickly test the application, visit the following link<br>
+| Web-page | Link | <br>
+|   ----   | ---- |<br>
+| Live Project|[Click here](https://walkover-takequiz.herokuapp.com/)| <br>
 
 <hr>
 
@@ -79,11 +79,11 @@ Steps to setup and run the project locally
 >10. Access the quiz with unique quiz id after user registration
 
 ## <u>ENV Variables</u>
-MONGO_URI
-API_URI = /api/v1
-NODE_ENV
-JWT_SECRET
-PORT=3001
-REACT_APP_LOGIN_API=/api/v1/auth/login
-password_mail 
+MONGO_URI<br>
+API_URI = /api/v1<br>
+NODE_ENV<br>
+JWT_SECRET<br>
+PORT=3001<br>
+REACT_APP_LOGIN_API=/api/v1/auth/login<br>
+password_mail <br>
 REACT_APP_REGISTRATION_API=/api/v1/auth/registration
