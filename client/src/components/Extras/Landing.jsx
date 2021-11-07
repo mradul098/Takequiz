@@ -11,15 +11,14 @@ const Landing = (props) => {
         <div className="" style={{ textAlign: "center", marginTop: "10vh" }}>
           <Icon size="240px" />
         </div>
-        <div className="jumbo">TakeQuiz</div>
-
-        <div className="col-sm-2 offset-sm-4 jumbo">
+        <div className="jumbo">TakeQuiz
+        <br></br>
         <Link to="/login">
                   <button
                     type="submit"
-                    className="button register-button2"
+                    className="button register-button"
                     style={{
-                      width: "100%",
+                      // width: "20%",
                       height: "42px",
                       // marginLeft:"55%"
                     }}
@@ -27,13 +26,13 @@ const Landing = (props) => {
                     Login
                   </button>
         </Link>
-                  
+        <br></br>
         <Link to="registration">
                   <button
                     type="submit"
-                    className="button register-button2"
+                    className="button register-button"
                     style={{
-                      width: "100%",
+                      // width: "100%",
                       height: "42px",
                       // marginLeft:"55%"
                     }}
@@ -41,6 +40,12 @@ const Landing = (props) => {
                     Register
                   </button>
         </Link>
+        </div>
+
+        <div className="col-sm-2 offset-sm-4 jumbo">
+        
+                  
+        
                 </div>
                 
         
