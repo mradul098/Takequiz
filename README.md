@@ -12,6 +12,9 @@ Admin has following rights :
 - Create Questions pool (pool maybe greater than number of question in test.)
 - Can see the ranks of candidates who has already completed their test
 - Can keep the count of the number of the tests created
+User has following rights :
+- Attend Test using the unique test id 
+- See the results of previously attended Quizzes
 <hr>
 
 ## <u>Features Specification</u>
@@ -43,7 +46,7 @@ Application is deployed on top of CI/CD pipeline of Heroku platform.
 To quickly test the application, visit the following link
 | Web-page | Link | 
 |   ----   | ---- |
-| Live Project|[Click here](http://takequizapp.herokuapp.com)| 
+| Live Project|[Click here](https://walkover-takequiz.herokuapp.com/)| 
 
 <hr>
 
