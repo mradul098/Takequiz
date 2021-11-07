@@ -77,7 +77,6 @@ class Dashboard extends Component {
 
 
 
-            {/* Tools section  end*/}
           </div>
         </div>
       </React.Fragment>
