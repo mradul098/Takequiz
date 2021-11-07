@@ -12,6 +12,7 @@ Admin has following rights :
 - Create Questions pool (pool maybe greater than number of question in test.)
 - Can see the ranks of candidates who has already completed their test
 - Can keep the count of the number of the tests created<br>
+
 User has following rights :
 - Attend Test using the unique test id 
 - See the results of previously attended Quizzes
