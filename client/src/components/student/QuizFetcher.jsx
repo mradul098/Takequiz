@@ -3,7 +3,6 @@ import NavBar from "../Format/NavBar";
 import { Link, Redirect } from "react-router-dom";
 import QuizService from "../../service/QuizService";
 import QuizHeader from "./QuizHeader";
-import ToolTip from "../Dashboard/ToolTip";
 
 class QuizFetcher extends Component {
   constructor(props) {

@@ -27,13 +27,7 @@ const QuizTaken = (props) => {
             }}
           >
             Your score is {quiz.solved} / {quiz.total_questions}
-            {/* <span
-              style={{
-                color: "var(--patterq-dark-purple)",
-              }}
-            >
-              Takequiz
-            </span> */}
+            
           </div>
         </div>
         <div className="row pt-3">
