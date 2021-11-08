@@ -60,8 +60,7 @@ class Dashboard extends Component {
                      </div>
           <div
             className="row mt-5 mb-5"
-            // very important code
-            // to (roughly) algin this with upper sections
+        
           >
               <Admintools
               classes="curated-quiz-section section2"
@@ -71,7 +70,7 @@ class Dashboard extends Component {
               curated={this.state.user.quizCreated}
               attended={this.state.user.quizAttended}
               flawless={this.state.user.quizFlawless}
-              // subtitle="Some tools may only be available in Pro License"
+              
             />
        
           </div>
