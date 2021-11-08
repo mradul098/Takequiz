@@ -425,16 +425,16 @@ button:focus {
 }
 
 .remove-button {
-  width: max-content;
+  /* width: max-content; */
   height: max-content;
   background-color: var(--patterq-deep-purple);
   border: none;
-  padding: 10px;
+  padding: 5px;
   font-family: "Roboto", sans-serif;
   color: var(--patterq-light);
   border-radius: 6px;
   margin-top: 10px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 .remove-button:hover {
   background-color: crimson;
@@ -444,7 +444,7 @@ button:focus {
 }
 
 .add-button {
-  width: max-content;
+  /* width: max-content; */
   height: max-content;
   background-color: var(--patterq-deep-purple);
   border: none;
@@ -453,7 +453,7 @@ button:focus {
   color: var(--patterq-light);
   border-radius: 6px;
   margin-top: 10px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .add-button:hover {
