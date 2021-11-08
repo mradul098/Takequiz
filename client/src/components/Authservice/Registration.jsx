@@ -3,6 +3,9 @@ import NavBar from "../Format/NavBar";
 import { Link, Redirect } from "react-router-dom";
 import AuthService from "../../service/AuthService";
 import AuthError from "../Format/AuthError";
+import Captcha from "react-numeric-captcha";
+import "./captcha.css"
+// import { text } from "express";
 
 class Registration extends Component {
   constructor(props) {
@@ -11,8 +14,9 @@ class Registration extends Component {
       name: "",
       email: "",
       password: "",
-      // role:"",
       error: false,
+      captchaSuccess: false,
+      text2:"Looks like you made a mistake. The email is probably not valid or taken. also check your internet connection"
     };
   }
 
@@ -34,34 +38,33 @@ class Registration extends Component {
 
   handleRegistrationSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password } = this.state;
+    const { name, email, password,captchaSuccess } = this.state;
     AuthService.register({ name, email, password }).then((response) => {
+      if(captchaSuccess==false){
+        this.setState({text2:"Enter valid captcha"})
+        this.setState({error:true})
+      }
+      else{
       if (response === false) {
         this.setState({ error: true });
+        this.setState({text2:"Looks like you made a mistake. The email is probably not valid or taken. also check your internet connection"})
       } else {
         alert("Account created Successfully")
         this.props.history.push("/login");
-      }
+      }}
     });
   };
   radioClick=(e) => {
     console.log(e.target.value)
   }
   render() {
-    // console.log("register", sessionStorage.getItem("isLoggedIn"));
     if (this.props.checkLogin()) {
       return <Redirect to={{ pathname: "/dashboard" }} />;
     }
-    // if (sessionStorage.getItem("isLoggedIn") === "true") {
-    //   return <Redirect to={{ pathname: "/dashboard" }} />;
-    // }
+  
     return (
       <React.Fragment>
-        {/* <NavBar
-          isLoggedIn={this.props.isLoggedIn}
-          checkLogin={this.props.checkLogin}
-          onLogout={this.props.onLogout}
-        /> */}
+      
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-8 offset-sm-4 mt-5">
@@ -122,6 +125,7 @@ class Registration extends Component {
                   />
                 </div>
               </div>
+              
 
               {/* password */}
               <div className="row mt-4">
@@ -143,31 +147,20 @@ class Registration extends Component {
                   />
                 </div>
               </div>
-
-              {/* role */}
-              {/* <div className="row mt-4">
-                <div
-                  className="col-sm-4 offset-sm-4"
-                  //   style={{ backgroundColor: "red" }}
-                >
-                  <label className="input-label" htmlFor="inputPassword">
-                    Role-Admin (Yes/No)
-                  </label>
-                  <input
-                    //required="required"
-                    type="text"
-                    className="form-control input-field"
-                    aria-describedby="Input"
-                    placeholder="Yes/No"
-                    value={this.state.role}
-                    //onChange={this.handleRoleChange}
-                  />
+              
+              <div className="row mt-4">
+                <div className="col-sm-4 offset-sm-4">
+                <Captcha
+            onChange={status => this.setState({ captchaSuccess: status })}
+          />
                 </div>
-              </div> */}
+              </div>
+              
               
 
               <div className="row mt-5">
                 <div className="col-sm-2 offset-sm-4">
+                  
                   <button
                     type="submit"
                     className="button register-button"
@@ -183,7 +176,7 @@ class Registration extends Component {
                 
               </div>
               {this.state.error && (
-                <AuthError text="Looks like you made a mistake. The email is probably not valid or taken. also check your internet connection" />
+                <AuthError text={this.state.text2} />
               )}
             </div>
           </form>
