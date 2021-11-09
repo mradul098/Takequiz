@@ -58,6 +58,10 @@ const quizSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  numb: {
+    type: Number,
+    default: 0,
+  },
   // partID:{
   //   type:String,
   //   default:0,

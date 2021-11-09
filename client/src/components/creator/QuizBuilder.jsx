@@ -13,6 +13,7 @@ class QuizBuilder extends Component {
       description: "",
       type: "classic",
       time: "",
+      numb:"",
       questions: [],
     };
   }
@@ -27,6 +28,9 @@ class QuizBuilder extends Component {
 
   handleDescriptionChange = (e) => {
     this.setState({ description: e.target.value });
+  };
+  handlenumque = (e) => {
+    this.setState({ numb: e.target.value });
   };
 
   handleTypeChange = (e) => {
@@ -126,6 +130,10 @@ class QuizBuilder extends Component {
   };
 
   handleSubmitQuiz = () => {
+    if(this.state.numb > this.state.questions.length){
+      alert("que pool should have more que than que per test")
+    }
+    else{
     QuizService.submit(this.state).then((response) => {
       if (response === false) {
         // if the quiz is invalid
@@ -136,7 +144,8 @@ class QuizBuilder extends Component {
           state: { quiz_id: _id },
         });
       }
-    });
+    
+    });}
   };
 
   render() {
@@ -165,6 +174,13 @@ class QuizBuilder extends Component {
                 placeholder="Quiz Description"
                 value={this.state.description}
                 onChange={this.handleDescriptionChange}
+              />
+              <br></br>
+              <input
+                className="profile-email input-quiz-desc mt-1"
+                placeholder="Number of que per test"
+                value={this.state.numb}
+                onChange={this.handlenumque}
               />
               <br></br>
               <input

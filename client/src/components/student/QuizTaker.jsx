@@ -6,11 +6,31 @@ import QuizService from "../../service/QuizService";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 // import Quiz from "../model/Quiz";
 
+function shuffle(a,b) {
+  var j, x, i;
+  for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+  }
+  var c=[];
+  for(i=0 ; i<b ; i++){
+    c.push(a[i]);
+  }
+  console.log("a",a);
+  console.log("c",c);
+  return c;
+}
 
 class QuizTaker extends Component {
   constructor(props) {
     super(props);
-    const { questions } = this.props.quiz;
+    const  questions  = shuffle(this.props.quiz.questions,this.props.quiz.numb);
+    // shuffle(questions);
+    // const questions2 = questions.slice(0,this.props.quiz.numb);
+    // questions=questions2;
+    console.log("fdf",questions);
     const answers = [];
     for (let i = 0; i < questions.length; i++) {
       answers.push({
@@ -20,10 +40,12 @@ class QuizTaker extends Component {
     }
 
     this.state = {
+      que:questions,
       quiz: this.props.quiz,
       user: this.props.user,
       answers: answers,
     };
+    console.log("state",this.state);
     sessionStorage.setItem("quiz-attending", this.state.quiz._id);
   }
   
@@ -111,7 +133,8 @@ class QuizTaker extends Component {
          
 
           <div className="row mt-5">
-            {quiz.questions.map((question) => (
+            {console.log()}
+            {this.state.que.map((question) => (
               <QuizQuestion
                 key={question.id}
                 question={question}

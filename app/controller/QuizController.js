@@ -6,26 +6,17 @@ const TakequizController = require("./TakequizController");
 
 const QuizController = {
   createQuiz: async (req, res, next) => {
-    const { title, description, type,time, questions } = req.body;
+    const { title, description, type,time, questions,numb } = req.body;
     const user_id = req.params.user_id;
 
-    // const quizSchema = Joi.object({
-    //   user_id: Joi.string().required(),
-    //   title: Joi.string().required(),
-    //   description: Joi.string(),
-    //   type: Joi.string().required(),
-    //   questions: Joi.array().required(),
-    // });
+    console.log("lump sum",req.body);
+
+   
 
     try {
       // create Quiz
-      const quiz = new Quiz({ user_id, title, description, type,time, questions});
-      // //   validating given data
-      // const { error } = quizSchema.validate(quiz);
-      // console.log(error);
-      // if (error)
-      //   return res.status(400).send("[validation error] Invalid data given.");
-      // return res.status(200).send("HU");
+      const quiz = new Quiz({ user_id, title, description, type,time, questions,numb});
+     
       const savedQuiz = await quiz.save();
 
       const quizzer = TakequizController.incrementCreatedCount(user_id);
