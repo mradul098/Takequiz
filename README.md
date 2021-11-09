@@ -14,7 +14,7 @@ Admin has following rights :
 - Can keep the count of the number of the tests created<br>
 
 User has following rights :
-- Attend Test using the unique test id (sample working test id = 61888f3838604d0016d2113a)
+- Attend Test using the unique test id (sample working test id = 6189ea0ac5ebf60016d00ac8)
 - See the results of previously attended Quizzes
 <hr>
 
