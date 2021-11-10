@@ -1,7 +1,7 @@
 
 # <div align=center><u>Take Quiz App</u></div>
 
-## <u>Intruduction</u>
+## <u>Introduction</u> 
 A web application made on top of Node.js and Express.js which provides a platform to host Multiple choice questions (MCQs) based online test.<br><br>
 The application comes with user side and an admin side
 > ##### Normal user : The one who will be giving the online test. <br> Admin user &nbsp;: The examiner or the one who wants to host the test. They have control over the application <br>
