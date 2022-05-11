@@ -37,9 +37,6 @@ User has following rights :
 
 <hr>
 
-## <u>Contributors</u>
->[Mradul Agrawal](https://github.com/mradul098)    <br>
-<hr>
 
 
 ## <u>Deployment</u>
