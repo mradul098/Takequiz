@@ -39,8 +39,6 @@ User has following rights :
 
 ## <u>Contributors</u>
 >[Mradul Agrawal](https://github.com/mradul098)    <br>
->[Sheikh Hafijul Ali](https://github.com/HafijulAli) <br>
->[Diksha Patidar](https://github.com/diksha0149)   <br>
 <hr>
 
 
